@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Simple JavaScript name sorting programme</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var namesnum=0;
+            var namesArray=new Array();
+  function sortnames(){
+        var name=document.namesaddform.nameInput.value;
+      namesArray[namesnum]=name;
+      namesnum++;
+      namesArray.sort();
+      document.namesaddform.namesShow.value=namesArray.join("\n");
+      
+  }
+  
+        </script>
+    </head>
+    
+  <body>
+      Just Enter names and press add button. It will enter the names in the textarea
+      and it will sort them automatically. It can handle 10 names.
+      <form name="namesaddform">
+          <input type="text" name="nameInput"/>
+          <input type="button" name="addButton" value="add" onclick="sortnames();"/><br/>
+      <textarea name="namesShow" cols="40" rows="10">
+          
+      </textarea>
+      </form>
+   </body>
+    
+</html>
